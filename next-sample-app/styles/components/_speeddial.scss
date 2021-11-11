@@ -1,0 +1,40 @@
+@import "../themes/_colorPalette.scss";
+
+.speedDial {
+    z-index: 100;
+    position: absolute;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 1vw 1vw 1vw 1vw;
+
+    button {
+        background-color: $primaryColor;
+        color: $tertiaryColor;
+
+        &:hover {
+            background-color: $tertiaryColor;
+            color: $primaryColor;
+        }
+    }
+
+    span > span {
+        width: 150px;
+        display: flex;
+        place-content: center;
+    }
+}
+
+.speedDial > button:nth-child(1) {
+    background-color: $tertiaryColor;
+}
+
+.speedDialIcon {
+    transition: all 1s;
+    transform: rotate(0deg);
+    fill: #fff !important;
+
+    &:hover {
+        transform: rotate(45deg);
+    }
+}

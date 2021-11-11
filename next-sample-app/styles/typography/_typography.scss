@@ -1,0 +1,61 @@
+@import "../themes/_colorPalette.scss";
+
+@mixin bodyText($fontSize: 18px, $color: $secondaryColor) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: $fontSize;
+    color: $color;
+}
+
+@mixin headerText($type: h1, $color: #000, $hasTextShadow: false) {
+
+    @if $type == h1 {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 50px;
+        color: $color;
+        margin: 0;
+        padding: 0;
+
+        @if $hasTextShadow {
+            text-shadow: 0px 2px 4px #af87149c;
+        }
+    }
+
+    @else if $type == h2 {
+        font-weight: 600;
+        font-style: normal;
+        font-size: 28px;
+        color: $color;
+        margin: 0;
+        padding: 0;
+
+        @if $hasTextShadow {
+            text-shadow: 0px 2px 4px #af87149c;
+        }
+    }
+    @else if $type == h3 {
+        font-weight: 500;
+        font-style: normal;
+        font-size: 21px;
+        color: $color;
+        margin: 0;
+        padding: 0;
+
+        @if $hasTextShadow {
+            text-shadow: 0px 2px 4px #af87149c;
+        }
+    }
+    @else if $type == h4 {
+        font-weight: 600;
+        font-style: normal;
+        font-size: 18px;
+        color: $color;
+        margin: 0;
+        padding: 0;
+
+        @if $hasTextShadow {
+            text-shadow: 0px 2px 4px #af87149c;
+        }
+    }
+}

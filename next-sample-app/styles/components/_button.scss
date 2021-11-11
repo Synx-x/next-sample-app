@@ -1,0 +1,46 @@
+@import "../abstracts/_boxshadows.scss";
+@import "../themes/_colorPalette.scss";
+
+//sitewide button
+@mixin button($width, $background, $color: $primaryColor, $hasBorder: false, $box-shadow: $box-shadow1-light) {
+    width: $width;
+    height: calc(#{$width} / 4.5);
+    background: $background;
+    color: $color;
+    box-shadow: $box-shadow;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .3s;
+    user-select: none;
+
+    &:hover, &:focus {
+        border: 1px solid $tertiaryColor;
+        background: $primaryColor;
+        color: $tertiaryColor;
+
+        @if $background == hsl(0, 0%, 100%) {
+            border: 1px solid $tertiaryColor;
+            background: $tertiaryColor;
+            color: $primaryColor;
+        }
+    }
+
+    &:active {
+        transform: translateY(4px);
+    }
+
+    &:hover {
+        transform: scale(1.03)
+    }
+
+    &:active {
+        transform: scale(.98)
+    }
+
+    @if $hasBorder {
+        border: 1px solid $color;
+    }
+}

@@ -1,0 +1,8 @@
+
+@mixin box-shadow($shadowIntensity: 0.2) {
+    box-shadow: 0px 18px 50px -15px rgba(0, 0, 0, $shadowIntensity);
+}
+
+$box-shadow1-light: 0px 18px 50px -15px rgba(25, 42, 89, 0.2);
+
+$box-shadow1-dark: 0px 18px 50px -15px rgba(25, 42, 89, 1.0);
