@@ -1,8 +1,29 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
+import styles from "../styles/pages/Home.module.scss";
+import { createMachine, Machine } from "xstate";
+import { useMachine } from "@xstate/react";
+import Link from "next/link";
 
 const Home: NextPage = () => {
+  const [machine, send] = useMachine(
+    createMachine({
+      initial: "toggledOff",
+      states: {
+        toggledOn: {
+          on: {
+            TOGGLE: "toggledOff",
+          },
+        },
+        toggledOff: {
+          on: {
+            TOGGLE: "toggledOn",
+          },
+        },
+      },
+    })
+  );
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,14 +33,25 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        Home Page
+        <h1>Home Page</h1>
+        <input
+          className={styles.button}
+          type="button"
+          value={machine.value.toString()}
+          onClick={() => send("TOGGLE")}
+        />
+        <Link href="/blog">
+          <input
+            className={styles.button}
+            type="button"
+            value={"Go to Blog Page"}
+          />
+        </Link>
       </main>
 
-      <footer className={styles.footer}>
-        Footer Section
-      </footer>
+      <footer className={styles.footer}>Footer Section</footer>
     </div>
-  )
-}
+  );
+};
 
 export default Home

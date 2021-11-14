@@ -1,0 +1,24 @@
+﻿@import "../themes/_colorPalette.scss";
+
+@mixin arrow($direction: right, $arrowColor: $tertiaryColor) {
+    border: solid $arrowColor;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+
+    @if $direction == right {
+        transform: rotate(-45deg);
+    }
+
+    @else if $direction == left {
+        transform: rotate(135deg);
+    }
+
+    @else if $direction == up {
+        transform: rotate(-135deg);
+    }
+
+    @else if $direction == down {
+        transform: rotate(45deg);
+    }
+}

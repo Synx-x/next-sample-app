@@ -8,21 +8,25 @@
     background: $background;
     color: $color;
     box-shadow: $box-shadow;
+    border: 2px solid $background;
     border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all .3s;
+    transition: color, background .3s;
     user-select: none;
-
+    font-size: 1.2em;
     &:hover, &:focus {
-        border: 1px solid $tertiaryColor;
-        background: $primaryColor;
-        color: $tertiaryColor;
+
+        @if $background == hsl(207, 90%, 54%) {
+            border: 2px solid $tertiaryColor;
+            background: $primaryColor;
+            color: $tertiaryColor;
+        }
 
         @if $background == hsl(0, 0%, 100%) {
-            border: 1px solid $tertiaryColor;
+            border: 2px solid $primaryColor;
             background: $tertiaryColor;
             color: $primaryColor;
         }
@@ -33,7 +37,7 @@
     }
 
     &:hover {
-        transform: scale(1.03)
+        transform: scale(1.00);
     }
 
     &:active {
@@ -41,6 +45,6 @@
     }
 
     @if $hasBorder {
-        border: 1px solid $color;
+        border: 2px solid $tertiaryColor;
     }
 }

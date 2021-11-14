@@ -1,6 +1,8 @@
 import { sql_query } from "../../lib/dbcon";
 import { generateInterface, formatQueryToJson } from "../../lib/generateInterface";
 import {IPosts} from '../../lib/types'
+import * as pageStyles from "../../styles/pages/Blog.module.scss";
+import Link from "next/link";
 
 export async function getStaticProps(context: any) {
   try {
@@ -13,10 +15,12 @@ export async function getStaticProps(context: any) {
 
     //generateInterface(result, "Labels");
 
-    let jsonRes = JSON.parse(JSON.stringify(formatQueryToJson(result, "Posts")));
+    let jsonRes = JSON.parse(
+      JSON.stringify(formatQueryToJson(result, "Posts"))
+    );
 
     const resultRes: IPosts = jsonRes;
-     
+
     console.log(resultRes);
 
     const result_set = {
@@ -35,26 +39,33 @@ export async function getStaticProps(context: any) {
   }
 }
 
-
 export default function Blog(props: any) {
   const { posts } = props;
-  //console.log(posts);
+
   if (!posts.posts) {
     return <p>Something went wrong.... {posts.message}</p>;
   } else {
     return (
-      <div>
-        <h1>Welcome to the blog page.....</h1>
-        {
-          posts.result_set.map((item: any) => (
+      <>
+        <div className={pageStyles.container}>
+          <h1>Welcome to the blog page.....</h1>
+          {posts.result_set.map((item: any) => (
             <>
               <h2>{item.title}</h2>
               <p>{item.content}</p>
               <br />
             </>
-          ))
-        }
-      </div>
+          ))}
+
+          <Link href="/">
+            <input
+              className={pageStyles.button}
+              type="button"
+              value={"Go to Blog Page"}
+            />
+          </Link>
+        </div>
+      </>
     );
   }
 }

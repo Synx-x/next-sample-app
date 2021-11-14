@@ -4,6 +4,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: $fontSize;
+    line-height: 27px;
     color: $color;
 }
 
@@ -14,8 +15,6 @@
         font-style: normal;
         font-size: 50px;
         color: $color;
-        margin: 0;
-        padding: 0;
 
         @if $hasTextShadow {
             text-shadow: 0px 2px 4px #af87149c;
@@ -27,8 +26,6 @@
         font-style: normal;
         font-size: 28px;
         color: $color;
-        margin: 0;
-        padding: 0;
 
         @if $hasTextShadow {
             text-shadow: 0px 2px 4px #af87149c;
@@ -39,8 +36,6 @@
         font-style: normal;
         font-size: 21px;
         color: $color;
-        margin: 0;
-        padding: 0;
 
         @if $hasTextShadow {
             text-shadow: 0px 2px 4px #af87149c;
@@ -51,8 +46,6 @@
         font-style: normal;
         font-size: 18px;
         color: $color;
-        margin: 0;
-        padding: 0;
 
         @if $hasTextShadow {
             text-shadow: 0px 2px 4px #af87149c;
