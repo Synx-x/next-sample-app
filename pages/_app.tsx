@@ -1,24 +1,25 @@
 import '../styles/globals.scss'
 import "../styles/vendors/_cssReset.scss";
 import "../styles/vendors/_normalize.scss";
-import motion from "framer-motion";
-
+import { motion, AnimatePresence } from "framer-motion";
 import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps, router }: AppProps) {
+function App({ Component, pageProps, router }: AppProps) {
   return (
-    <motion.div
-      key={router.route}
-      initial={"pageInitial"}
-      animate={"pageAnimate"}
-      variants={{
-        pageInitial: { opacity: 0 },
-        pageAnimate: { opacity: 1 },
-      }}
-    >
-      <Component {...pageProps} />
-    </motion.div>
+    <AnimatePresence>
+      <motion.div
+        key={router.route}
+        initial="pageInitial"
+        animate="pageAnimate"
+        variants={{
+          pageInitial: { opacity: 0 },
+          pageAnimate: { opacity: 1 },
+        }}
+      >
+        <Component {...pageProps} />
+      </motion.div>
+    </AnimatePresence>
   );
 }
 
-export default MyApp
+export default App;

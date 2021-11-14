@@ -40,7 +40,7 @@ const Home: NextPage = () => {
           value={machine.value.toString()}
           onClick={() => send("TOGGLE")}
         />
-        <Link href="/blog">
+        <Link href="/blog" passHref>
           <input
             className={styles.button}
             type="button"
