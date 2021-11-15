@@ -1,7 +1,14 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, ReactNode } from "react";
 import * as styles from "../styles/components/Navbar.module.scss";
+import { motion, AnimatePresence } from "framer-motion";
 
-const NavBar = React.memo((props) => {
+interface NavProps {
+  icon?: string;
+  children?: ReactNode;
+  leftIcon?: string;
+}
+
+const NavBar = React.memo((props: NavProps) => {
   const [count, useCount] = useState(0);
 
   return (
@@ -11,7 +18,7 @@ const NavBar = React.memo((props) => {
   );
 });
 
-export const NavItems = React.memo((props) => {
+export const NavItems = React.memo((props: NavProps) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -24,13 +31,13 @@ export const NavItems = React.memo((props) => {
   );
 });
 
-export const DropdownMenu = React.memo((props) => {
+export const DropdownMenu = React.memo((props: NavProps) => {
   const [activeMenu, setActiveMenu] = useState("main");
 
   return <div className={styles.dropdownMenu}></div>;
 });
 
-export const DropdownItem = React.memo((props) => {
+export const DropdownItem = React.memo((props: NavProps) => {
   return (
     <a href="#" className={styles.menuItem}>
       <span className={styles.iconLeft}>{props.leftIcon}</span>
