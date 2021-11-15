@@ -3,15 +3,15 @@
 
 .QuoteTitle {
     h2 {
-        display: flex;
-        width: 100%;
+        display : flex;
+        width   : 100%;
         align-items: center;
-        color: $tertiaryColor;
+        color : $tertiaryColor;
     }
 }
 
 .QuoteButton {
-    @include button(100%, $tertiaryColor,$primaryColor,true);
+    @include button(100%, $tertiaryColor, $primaryColor, true);
 
     &:hover {
         transform: scale(1)
@@ -22,25 +22,25 @@
     }
 
     aspect-ratio: unset;
-    height: 4vh;
+    height : 4vh;
 }
 
 .quoteContainer {
-    display: grid;
+    display : grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr;
-    padding: 0 1vw 0 1vw;
+    grid-template-rows : auto 1fr 1fr;
+    padding            : 0 1vw 0 1vw;
 
     @media(max-width: 716px) {
-        display: flex;
+        display : flex;
         flex-direction: column;
     }
 }
 
 .quoteCol1 {
     grid-column: 1/2;
-    grid-row: 1/2;
-    padding: .5rem;
+    grid-row : 1/2;
+    padding  : .5rem;
 
     div {
         font-weight: 100;
@@ -53,8 +53,8 @@
 
 .quoteCol2 {
     grid-column: 2/3;
-    grid-row: 1/2;
-    padding: .5rem;
+    grid-row : 1/2;
+    padding  : .5rem;
 
     div {
         font-weight: 100;
@@ -67,8 +67,8 @@
 
 .quoteCol3 {
     grid-column: 3/4;
-    grid-row: 1/2;
-    padding: .5rem;
+    grid-row : 1/2;
+    padding  : .5rem;
 
     div {
         font-weight: 100;
@@ -81,8 +81,8 @@
 
 .quoteMessage {
     grid-column: 1/-1;
-    grid-row: 2/4;
-    padding: .5rem;
+    grid-row : 2/4;
+    padding  : .5rem;
 
     :hover {
         border: 1px solid #000;
@@ -94,12 +94,12 @@
 }
 
 .quoteTextArea {
-    width: 0;
-    min-width: 100%;
-    padding: .7rem;
-    border: 1px solid #c4c4c4c4;
+    width     : 0;
+    min-width : 100%;
+    padding   : .7rem;
+    border    : 1px solid #c4c4c4c4;
     border-radius: 3px;
-    font-size: 1rem;
+    font-size : 1rem;
 }
 
 .quoteAsterisk {
@@ -109,15 +109,15 @@
 }
 
 .quoteOuterContainer {
-    display: flex;
+    display : flex;
     justify-content: center;
 
     div {
-        color: $secondaryColor;
+        color : $secondaryColor;
         text-align: center;
 
         @media(max-width: 1000px) {
-            width: 100%;
+            width : 100%;
             margin-bottom: .2em;
         }
 

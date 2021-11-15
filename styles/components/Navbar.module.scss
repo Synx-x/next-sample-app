@@ -1,0 +1,99 @@
+@import "../typography/_typography.scss";
+
+.nav {
+    display         : flex;
+    align-items     : center;
+    width           : 100%;
+    height          : var(--nav-size);
+    position        : fixed;
+    background-color: var(--bg);
+    border-bottom   : var(--border);
+    padding         : 0 1rem;
+    z-index         : 10;
+}
+
+.navUl {
+    max-width  : 100%;
+    height     : 100%;
+    display    : flex;
+    margin-left: auto;
+}
+
+.navItem {
+    width          : calc(var(--nav-size) * 0.8);
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+.iconButton {
+    width                : var(--button-size);
+    height               : var(--button-size);
+    border-radius        : 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius   : 50%;
+    -ms-border-radius    : 50%;
+    -o-border-radius     : 50%;
+    padding              : .3125rem;
+    margin               : .125rem;
+    display              : flex;
+    background-color     : #484a4d;
+    align-items          : center;
+    justify-content      : center;
+    transition           : filter 300ms;
+    -webkit-transition   : filter 300ms;
+    -moz-transition      : filter 300ms;
+    -ms-transition       : filter 300ms;
+    -o-transition        : filter 300ms;
+
+    &:hover {
+        filter        : brightness(1.2);
+        -webkit-filter: brightness(1.2);
+    }
+}
+
+.dropdownMenu {
+    position             : absolute;
+    top                  : 3.625rem;
+    width                : 18.75rem;
+    height               : 18.75rem;
+    transform            : translateX(-45%);
+    -webkit-transform    : translateX(-45%);
+    -moz-transform       : translateX(-45%);
+    -ms-transform        : translateX(-45%);
+    -o-transform         : translateX(-45%);
+    background-color     : var(--bg);
+    border               : var(--border);
+    border-radius        : var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius   : var(--border-radius);
+    -ms-border-radius    : var(--border-radius);
+    -o-border-radius     : var(--border-radius);
+    padding              : 1rem;
+    overflow             : hidden;
+}
+
+.menuItem {
+    height               : 3.125rem;
+    display              : flex;
+    align-items          : center;
+    border-radius        : var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius   : var(--border-radius);
+    -ms-border-radius    : var(--border-radius);
+    -o-border-radius     : var(--border-radius);
+    transition           : background var(--speed);
+    -webkit-transition   : background var(--speed);
+    -moz-transition      : background var(--speed);
+    -ms-transition       : background var(--speed);
+    -o-transition        : background var(--speed);
+    padding              : 0.5rem;
+
+    &:hover {
+        background-color: #525357;
+    }
+}
+
+.iconLeft {
+    margin-left: auto;
+}
