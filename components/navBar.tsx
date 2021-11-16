@@ -1,7 +1,13 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, ReactNode } from "react";
 import styles from "../styles/components/Navbar.module.scss";
 
-const NavBar = React.memo((props) => {
+interface INavbar {
+  icon?: string;
+  children?: ReactNode;
+  leftIcon?: string;
+}
+
+const NavBar = React.memo((props: INavbar) => {
   const [count, useCount] = useState(0);
 
   return (
@@ -11,7 +17,7 @@ const NavBar = React.memo((props) => {
   );
 });
 
-export const NavItems = React.memo((props) => {
+export const NavItems = React.memo((props: INavbar) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -24,13 +30,13 @@ export const NavItems = React.memo((props) => {
   );
 });
 
-export const DropdownMenu = React.memo((props) => {
+export const DropdownMenu = React.memo((props: INavbar) => {
   const [activeMenu, setActiveMenu] = useState("main");
 
   return <div className={styles.dropdownMenu}></div>;
 });
 
-export const DropdownItem = React.memo((props) => {
+export const DropdownItem = React.memo((props: INavbar) => {
   return (
     <a href="#" className={styles.menuItem}>
       <span className={styles.iconLeft}>{props.leftIcon}</span>
