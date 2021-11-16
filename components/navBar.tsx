@@ -1,6 +1,5 @@
 import React, { useState, useMemo, ReactNode } from "react";
-import * as styles from "../styles/components/Navbar.module.scss";
-import { motion, AnimatePresence } from "framer-motion";
+import styles from "../styles/components/Navbar.module.scss";
 
 interface NavProps {
   icon?: string;
