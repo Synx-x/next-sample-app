@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import * as styles from "../styles/components/Navbar.module.scss";
+import styles from "../styles/components/Navbar.module.scss";
 
 const NavBar = React.memo((props) => {
   const [count, useCount] = useState(0);
