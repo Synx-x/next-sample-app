@@ -11,8 +11,8 @@ export async function getStaticProps(context: any) {
           ORDER BY id ASC
       `);
 
-    //generateInterface(result, "Post");
-
+    generateInterface(result, "Post");
+    generateInterface(result, "Labels");
     // let jsonRes = JSON.parse(
     //   JSON.stringify(formatQueryToJson(result, "Posts"))
     // );
