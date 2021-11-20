@@ -29,3 +29,14 @@ a {
   color: var(--text-color);
   text-decoration: none;
 }
+main {
+  display              : grid !important;
+  grid-template-columns: 9fr auto;
+  grid-template-rows   : 50px auto 50px;
+  grid-template-areas  : "header header"
+    "main chat"
+    "footer footer";
+  justify-items: center;
+
+  grid-area: main;
+}

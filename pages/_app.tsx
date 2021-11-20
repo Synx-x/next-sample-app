@@ -1,4 +1,4 @@
-import '../styles/globals.scss'
+import "../styles/globals.scss";
 import "../styles/vendors/_cssReset.scss";
 import "../styles/vendors/_normalize.scss";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,6 +9,7 @@ import Navbar, {
   NavItems,
 } from "../components/navBar";
 import React from "react";
+import SideBar from "../components/sideBar";
 
 function App({ Component, pageProps, router }: AppProps) {
   return (
@@ -37,7 +38,10 @@ function App({ Component, pageProps, router }: AppProps) {
             pageAnimate: { opacity: 1 },
           }}
         >
-          <Component {...pageProps} />
+          <main>
+            <SideBar {...router} />
+            <Component {...pageProps} />
+          </main>
         </motion.div>
       </AnimatePresence>
     </>

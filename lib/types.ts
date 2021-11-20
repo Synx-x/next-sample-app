@@ -5,13 +5,11 @@ export interface IPost {
   isNew: number;
   timestamp: string;
 }
-
-export interface ILabels {
+export interface IfromApi {
+  userId: number;
   id: number;
   title: string;
-  content: string;
-  isNew: number;
-  timestamp: string;
+  body: string;
 }
 
 
