@@ -1,10 +1,75 @@
 .container {
-    display         : flex;
-    justify-content : center;
-    align-items     : center;
+    display        : flex;
+    position       : relative;
+    justify-content: center;
+    align-items    : center;
     background-color: var(--bg);
-    color           : var(--text-color);
-    border          : 1px solid gray;
-    height          : 100vh;
-    width           : 25vw;
+    color             : var(--text-color);
+    border            : 1px solid var(--border);
+    height            : calc(100vh - var(--nav-size));
+    width             : 25vw;
+    margin-top        : var(--nav-size);
+    transition        : width .5s linear;
+    -webkit-transition: width .5s linear;
+    -moz-transition   : width .5s linear;
+    -ms-transition    : width .5s linear;
+    -o-transition     : width .5s linear;
+    }
+
+    .SidebarButton {
+        all                  : unset;
+        position             : absolute;
+        top                  : 1rem;
+        right                : .3125rem;
+        width                : 50px;
+        aspect-ratio         : 1/1;
+        border-radius        : 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius   : 50%;
+        -ms-border-radius    : 50%;
+        -o-border-radius     : 50%;
+        background-color     : var(--bg);
+        border               : 1px solid var(--border);
+        text-align           : center;
+        cursor               : pointer;
+        transition           : right 1s linear, background-color .4s linear;
+        -webkit-transition   : right 1s linear, background-color .4s linear;
+        -moz-transition      : right 1s linear, background-color .4s linear;
+        -ms-transition       : right 1s linear, background-color .4s linear;
+        -o-transition        : right 1s linear, background-color .4s linear;
+    }
+
+    .inactive {
+        width             : 0;
+        right             : 0;
+        transition        : right .5s linear, width .5s linear;
+        -webkit-transition: right .5s linear, width .5s linear;
+        -moz-transition   : right .5s linear, width .5s linear;
+        -ms-transition    : right .5s linear, width .5s linear;
+        -o-transition     : right .5s linear, width .5s linear;
+
+        &:hover {
+            right: -55px;
+        }
+    }
+
+
+    .active {
+        width             : 25vw;
+        right             : 0;
+        transition        : right .5s linear, width .5s linear;
+        -webkit-transition: right .5s linear, width .5s linear;
+        -moz-transition   : right .5s linear, width .5s linear;
+        -ms-transition    : right .5s linear, width .5s linear;
+        -o-transition     : right .5s linear, width .5s linear;
+    }
+
+    .buttonInactive {
+        right             : -25px;
+        background-color  : rgb(0, 143, 220);
+        transition        : right 1s linear, background-color .4s linear;
+        -webkit-transition: right 1s linear, background-color .4s linear;
+        -moz-transition   : right 1s linear, background-color .4s linear;
+        -ms-transition    : right 1s linear, background-color .4s linear;
+        -o-transition     : right 1s linear, background-color .4s linear;
 }

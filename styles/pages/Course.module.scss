@@ -1,0 +1,124 @@
+.main {
+    background-color: rgb(255, 255, 255);
+    height          : 100vh;
+    display         : flex;
+    padding-top     : var(--nav-size);
+    align-items     : center;
+    justify-content : center;
+    flex-direction  : column;
+    overflow        : auto;
+    width           : 100%;
+}
+
+.accordion {
+    width                : 90%;
+    height               : 5vh;
+    display              : flex;
+    flex-direction       : row;
+    place-content        : space-between;
+    align-items          : center;
+    border-radius        : 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius   : 10px;
+    -ms-border-radius    : 10px;
+    -o-border-radius     : 10px;
+    background-color     : var(--bg);
+    border               : var(--border);
+    padding              : 0 1rem;
+    transition           : height .4s linear;
+    -webkit-transition   : height .4s linear;
+    -moz-transition      : height .4s linear;
+    -ms-transition       : height .4s linear;
+    -o-transition        : height .4s linear;
+
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+.accordionActive {
+    height            : 20vh;
+    padding           : 1rem 1rem;
+    transition        : height .4s linear;
+    -webkit-transition: height .4s linear;
+    -moz-transition   : height .4s linear;
+    -ms-transition    : height .4s linear;
+    -o-transition     : height .4s linear;
+}
+
+.accordionVideo {
+    width   : 0;
+    height  : 0;
+    border  : var(--border);
+    position: absolute;
+}
+
+.accordionVideoActive {
+    width             : 25%;
+    height            : 100%;
+    position          : relative;
+    transition        : height .4s linear;
+    -webkit-transition: height .4s linear;
+    -moz-transition   : height .4s linear;
+    -ms-transition    : height .4s linear;
+    -o-transition     : height .4s linear;
+}
+
+.searchbarContainer {
+    display         : flex;
+    flex-direction  : column;
+    height          : calc(100% / 9);
+    width           : 100%;
+    place-content   : center;
+    align-items     : center;
+    background-color: var(--bg);
+    border          : var(--border);
+    border-top      : none;
+    border-right    : none;
+    color           : var(--text-color);
+
+    input {
+        all                  : unset;
+        width                : 25%;
+        text-align           : center;
+        color                : var(--text-color);
+        background-color     : var(--bg);
+        border               : var(--border);
+        border-radius        : .625rem;
+        -webkit-border-radius: .625rem;
+        -moz-border-radius   : .625rem;
+        -ms-border-radius    : .625rem;
+        -o-border-radius     : .625rem;
+    }
+}
+
+.courseInformation {
+    display         : flex;
+    flex-direction  : column;
+    height          : calc(100% / 5);
+    width           : 100%;
+    place-content   : center;
+    align-items     : center;
+    background-color: var(--bg);
+    border-left     : var(--border);
+    color           : var(--text-color);
+}
+
+.courseContent {
+    display         : flex;
+    flex-direction  : column;
+    height          : calc(100%);
+    width           : 100%;
+    align-items     : center;
+    background-color: var(--bg);
+    border          : var(--border);
+    border-right    : none;
+
+    color   : var(--text-color);
+    overflow: auto;
+    gap     : .5rem;
+}
+
+.courseContentInactive {
+    justify-content: space-evenly;
+}

@@ -5,14 +5,49 @@
     background-color: rgb(255, 255, 255);
     height          : 100vh;
     display         : flex;
-    height          : 100vh;
+    padding-top : var(--nav-size);
     align-items     : center;
     justify-content : center;
     flex-direction  : column;
-    gap             : .9375rem;
+    overflow : auto;
+    width    : 100%;
 }
 
 .button {
     height: 50px;
     width : 150px;
+}
+.LandingSection {
+    display         : flex;
+    flex-direction  : column;
+    height          : calc(100%);
+    width           : 100%;
+    place-content   : center;
+    align-items     : center;
+    background-color: var(--bg);
+    color           : var(--text-color);
+}
+
+.UserProgressSection {
+    display         : flex;
+    flex-direction  : column;
+    height          : calc(100%);
+    width           : 100%;
+    place-content   : center;
+    align-items     : center;
+    background-color: var(--bg);
+    border-top      : 1px solid rgba(128, 128, 128, 0.159);
+    border-bottom   : 1px solid rgba(128, 128, 128, 0.159);
+    color           : var(--text-color);
+}
+
+.UserStatsSection {
+    display         : flex;
+    flex-direction  : column;
+    height          : calc(100%);
+    width           : 100%;
+    place-content   : center;
+    align-items     : center;
+    background-color: var(--bg);
+    color           : var(--text-color);
 }
