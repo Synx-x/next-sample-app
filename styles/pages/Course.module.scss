@@ -1,6 +1,6 @@
 .main {
     background-color: rgb(255, 255, 255);
-    height          : 100vh;
+    height : 100%;
     display         : flex;
     padding-top     : var(--nav-size);
     align-items     : center;
@@ -12,7 +12,7 @@
 
 .accordion {
     width                : 90%;
-    height               : 5vh;
+    height : 3.5rem;
     display              : flex;
     flex-direction       : row;
     place-content        : space-between;
@@ -30,6 +30,8 @@
     -moz-transition      : height .4s linear;
     -ms-transition       : height .4s linear;
     -o-transition        : height .4s linear;
+    margin-top: .3rem;
+    margin-bottom: .3rem;
 
     h2 {
         font-size: 1rem;
@@ -37,7 +39,7 @@
 }
 
 .accordionActive {
-    height            : 20vh;
+    height : 12rem;
     padding           : 1rem 1rem;
     transition        : height .4s linear;
     -webkit-transition: height .4s linear;
@@ -47,15 +49,15 @@
 }
 
 .accordionVideo {
-    width   : 0;
-    height  : 0;
+    width : 0;
+    height: 0;
     border  : var(--border);
     position: absolute;
 }
 
 .accordionVideoActive {
-    width             : 25%;
-    height            : 100%;
+    width : 20%;
+    height :100%;
     position          : relative;
     transition        : height .4s linear;
     -webkit-transition: height .4s linear;
@@ -116,7 +118,7 @@
 
     color   : var(--text-color);
     overflow: auto;
-    gap     : .5rem;
+    padding: 1rem;
 }
 
 .courseContentInactive {

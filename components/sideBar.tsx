@@ -32,7 +32,9 @@ const SideBar = (props: any) => {
       >
         {active ? "close" : "open"}
       </button>
-      {active ? `this is the sidebar for route: ${props.route}` : ""}
+      <div className={PageStyles.SidebarContent}>
+        {active ? `this is the sidebar for route: ${props.route}` : ""}
+      </div>
     </div>
   );
 };

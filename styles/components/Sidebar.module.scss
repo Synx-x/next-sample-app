@@ -5,7 +5,9 @@
     align-items    : center;
     background-color: var(--bg);
     color             : var(--text-color);
-    border            : 1px solid var(--border);
+    border    : var(--border);
+    border-top: none;
+    border-right: none;
     height            : calc(100vh - var(--nav-size));
     width             : 25vw;
     margin-top        : var(--nav-size);
@@ -29,7 +31,7 @@
         -ms-border-radius    : 50%;
         -o-border-radius     : 50%;
         background-color     : var(--bg);
-        border               : 1px solid var(--border);
+        border : var(--border);
         text-align           : center;
         cursor               : pointer;
         transition           : right 1s linear, background-color .4s linear;
@@ -49,7 +51,7 @@
         -o-transition     : right .5s linear, width .5s linear;
 
         &:hover {
-            right: -55px;
+            right: -25px;
         }
     }
 
@@ -72,4 +74,9 @@
         -moz-transition   : right 1s linear, background-color .4s linear;
         -ms-transition    : right 1s linear, background-color .4s linear;
         -o-transition     : right 1s linear, background-color .4s linear;
+}
+.SidebarContent {
+    display         : flex;
+    background-color: rgb(7, 61, 133);
+    position        : fixed;
 }
